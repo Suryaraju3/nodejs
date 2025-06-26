@@ -21,6 +21,10 @@
 ## .gitignore
 
 * .gitignore is a text file in our Git repository that tells Git which files to ignore in a project.
+
+## eslint.config.mjs
+
+* ESLint project configuration in a configuration file.
 *  ESLint a tool that checks for JavaScript errors and enforces coding style.
 
 ## jsconfig.json
