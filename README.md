@@ -36,3 +36,11 @@
 * package-lock.json locks down the specific versions of all packages. It is automatically created and maintained by npm. 
 * we should not modify it manually.
 
+NPM - Node Package Manager
+
+* used for installing and publishing packages 
+
+NPE - Node Package Execute
+
+* NPX is a package executer without installing we can use dirctly.
+
