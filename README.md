@@ -1,6 +1,7 @@
 
 # app
 
+* application refers to any software application built using the Node.js runtime environment.
 ### favicon.ico
 
 * We can see the top on the webpage a small icon.
