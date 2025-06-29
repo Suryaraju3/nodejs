@@ -444,23 +444,23 @@ variant.
 
 * We combine the `not-` variant with media query variants like `forced-colors` or `supports`.
 
-## We Styling based on parent state
+### We Styling based on parent state
 
 * When you need to style an element based on the state of some parent element, mark the parent with the `group` class, and use `group-*` variants like `group-hover` to style the target element.
 
 * This pattern works with every pseudo-class variant, for example `group-focus`, `group-active`, or even `group-odd`.
 
-## Differentiating nested groups
+### Differentiating nested groups
 
 * We can style something based on the state of a specific parent group by giving that parent a unique group name using a `group/{name}` class, and including that name in variants using classes like `group-hover/{name}`.
 
-## Differentiating peers
+### Differentiating peers
 
 * When using multiple peers, you can style something on the state of a specific peer by giving that peer a unique name using a `peer/{name}` class, and including that name in variants using classes like `peer-checked/{name}`.
 
 ## Pseudo-elements
 
-### ::before and ::after
+#### ::before and ::after
 
 * We style the `::before` and `::after` pseudo-elements using the before and after variants.
 
@@ -496,15 +496,15 @@ variant.
 
 * We style the backdrop of a native dialog element using the backdrop variant.
 
-## forced-colors
+### forced-colors
 
 * We use the `forced-colors` variant to conditionally add styles when the user has enabled a forced color mode.
 
-## inverted-colors
+### inverted-colors
 
 * Use the `inverted-colors` variant to conditionally add styles when the user has enabled an inverted color scheme.
 
-## pointer and any-pointer
+### pointer and any-pointer
 
 * `pointer` media query tells you whether the user has a primary pointing device, like a mouse, and the accuracy of that pointing device.
 
@@ -512,11 +512,11 @@ variant.
 
 * We can use `pointer-none` and `any-pointer-none` to target the absence of a pointing device.
 
-## orientation
+### orientation
 
 * We use the `portrait` and `landscape` variants to conditionally add styles when the viewport is in a specific orientation.
 
-## scripting
+### scripting
 
 * Use the noscript variant to conditionally add styles based on whether the user has scripting.
 
@@ -532,13 +532,13 @@ variant.
 
 * Use the `starting` variant to set the appearance of an element when it is first rendered in the DOM.
 
-# Dark mode
+## Dark mode
 
 * it's becoming more common to design a dark version of our website to go along with the default design.
 
 * `dark` variant that lets you style your site differently when dark mode is enabled.
 
-# Theme variables
+## Theme variables
 
 * Theme variables are special CSS variables defined using the `@theme` directive that influence which utility classes exist in our project.
 
