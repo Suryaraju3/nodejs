@@ -543,3 +543,15 @@ variant.
 * Theme variables are special CSS variables defined using the `@theme` directive that influence which utility classes exist in our project.
 
 * We can add a new color to our project by defining a theme variable like `--color-mint-500`. We can classes like bg-mint-500, text-mint-500, or fill-mint-500 in your HTML.
+
+## color
+
+* We can apply colors in Tailwind, which uses utility classes to handle colors.
+
+#### color utilities
+
+ * We use color utilities like `bg-white`, `border-pink-300`, and `text-gray-950` to set the different color properties of elements in our design color.
+
+ 
+### Utility_________________ Description
+*      bg-*	            Sets the background color of an element
