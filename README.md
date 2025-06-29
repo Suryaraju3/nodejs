@@ -554,4 +554,4 @@ variant.
 
  
 ### Utility_________________ Description
-   *    bg-*	            Sets the background color of an element
+   *    bg-*	----            Sets the background color of an element
