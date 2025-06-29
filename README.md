@@ -554,4 +554,16 @@ variant.
 
  
 ### Utility_________________ Description
-   *    bg-*	----            Sets the background color of an element
+   * bg-*	------------------Sets the background color of an element
+   * text-* ------------------Sets the text color of an element
+   * decoration-* ------------Sets the text decoration color of an element
+   * border-*	--------------Sets the border color of an element
+   * outline-*	--------------Sets the outline color of an element
+   * shadow-*	--------------Sets the color of box shadows
+   * inset-shadow-*	----------Sets the color of inset box shadows
+   * ring-*	------------------Sets the color of ring shadows
+   * inset-ring-*	----------Sets the color of inset ring shadows
+   * accent-*	--------------Sets the accent color of form controls
+   * caret-*	--------------Sets the caret color in form controls
+   * fill-*	------------------Sets the fill color of SVG elements
+   * stroke-*	--------------Sets the stroke color of SVG elements
