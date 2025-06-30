@@ -567,3 +567,410 @@ variant.
    * caret-*	--------------Sets the caret color in form controls
    * fill-*	------------------Sets the fill color of SVG elements
    * stroke-*	--------------Sets the stroke color of SVG elements
+
+   #### opacity
+
+   * We can adjust the opacity of a color using syntax like `bg-black/75`, And This syntax also supports arbitrary values and the CSS variable.
+
+   #### Targeting dark mode
+
+   * We use the dark variant to write classes like `dark:bg-gray-800` that only apply a color when dark mode is active.
+
+   # Adding custom styles
+
+   * Tailwind has been designed from the ground up to be extensible and customizable.
+
+   
+#### theme
+
+* If we want to change things like our color palette, spacing scale, typography scale, or breakpoints, add our customizations using the `@theme` directive in our CSS.
+
+* We can add a new color to your project by defining a theme variable like `--color-mint-500`.
+
+* We can use utility classes like `bg-mint-500`, `text-mint-500`, or `fill-mint-500` in your HTML.
+
+# Functions and directives
+
+* Reference for the custom functions and directives Tailwind exposes to our CSS.
+
+#### @import
+
+* `@import` directive to inline import CSS files.
+
+#### @theme
+
+* `@theme` directive to define our project's custom design tokens, like fonts, colors, and breakpoints.
+
+#### @source
+
+* `@source` directive to explicitly specify source files that aren't picked up by Tailwind's automatic content detection.
+
+#### @utility
+
+* `@utility` directive to add custom utilities to your project that work with variants like `hover`, `focus` and `lg`.
+
+#### @variant
+
+* `@variant` directive to apply a Tailwind variant to styles in our CSS.
+
+#### @custom-variant
+
+* `@custom-variant` directive to add a custom variant in our project.
+
+* This are utilities theme-midnight:bg-black and theme-midnight:text-white.
+
+#### @apply
+
+*  `@apply` directive to inline any existing utility classes into our own custom CSS.
+
+#### @reference
+
+* We use the `@reference` directive to import your main stylesheet for reference without actually including the styles.
+
+* If we are just using the default theme with no customizations, you can import `tailwindcss` directly.
+
+### Functions
+
+* Functions to make working with colors and the spacing scale easier.
+
+#### --alpha()
+
+* `--alpha()` function to adjust the opacity of a color.
+
+#### --spacing()
+
+* `--spacing()` function to generate a spacing value based on your theme.
+
+### Compatibility
+
+* The `@config` and `@plugin` directives may be used in conjunction with `@theme`, `@utility`, and other CSS-driven features.
+
+
+## Preflight
+
+* When we import tailwindcss into our project, Preflight is automatically injected into the base layer.
+
+* Preflight removes all of the default margins from all elements including headings, blockquotes, paragraphs.
+
+# aspect-ratio
+
+* This Utilities for controlling the aspect ratio of an element.
+
+* We use `aspect-<ratio>` utilities like `aspect-3/2` to give an element a specific aspect ratio.
+
+#### Using a video aspect ratio
+
+* We use the aspect-video utility to give a video element a 16/9 aspect ratio.
+
+# columns
+
+* To control the number of columns within an element.
+
+###### example:
+* We use `columns-<number>` utilities like `columns-4` to set the number of columns that should be created for the content within an element.
+
+* The column width will automatically adjust to accommodate the specified number of columns.
+
+### width
+
+* Utilities like `columns-xs` and `columns-sm` to set the ideal column width for the content within an element.
+
+* When setting the column width, the number of columns automatically adjusts to ensure they don't get too narrow.
+
+### column gap
+
+* We use the `gap-<width>` utilities to specify the width between columns.
+
+### custom value
+
+* `columns-[<value>]` syntax to set the columns based on a completely custom value.
+
+* CSS variables, We can also use the `columns-(<custom-property>)` syntax.
+
+* Shorthand for `columns-[var(<custom-property>)]` that adds the var() function for you automatically.
+
+### Responsive design
+
+* We Prefix a columns utility with a breakpoint variant like `sm:` to only apply the utility at small screen sizes and above.
+
+# break-after
+
+* How a column or page should break after an element.
+
+* ex: We use utilities like `break-after-column` and `break-after-page` to control how a column or page break should behave after an element
+
+### Responsive design
+
+* `break-after` utility with a breakpoint variant like `md:` to only apply the utility at medium screen sizes.
+
+# break-before
+
+* We use utilities for controlling how a column or page should break before an element.
+
+* ex: We use utilities like `break-before-column` and `break-before-page` to control how a column or page break should behave before an element.
+
+### Responsive design
+
+* We add prefix a `break-before` utility with a breakpoint variant like `md:` to only apply the utility at medium screen sizes and above.
+
+# break-inside
+
+* Use utilities for controlling how a column or page should break within an element.
+
+* ex: Use utilities like `break-inside-column` and `break-inside-avoid-page` to control how a column or page break should behave within an element.
+
+### Responsive design
+
+* Use prefix a `break-inside` utility with a breakpoint variant like `md:` to only apply the utility at medium screen sizes.
+
+# box-decoration-break
+
+* How element fragments should be rendered across multiple lines, columns, or pages.
+
+* ex: We use the `box-decoration-slice` and `box-decoration-clone` utilities to control whether properties like background, border, border-image, box-shadow, clip-path, margin, and padding should be rendered as if the element were one continuous fragment, or distinct blocks.
+
+### Responsive design
+
+* `box-decoration-break` utility with a breakpoint variant like md: to only apply the utility at medium screen sizes 
+
+# box-sizing
+
+* How the browser should calculate an element's total size.
+
+#### Including borders and padding
+* Use the box-border utility to set an element's `box-sizing` to `border-box`, telling the browser to include the element's borders and padding when we give it a height or width.
+
+#### Excluding borders and padding
+* We use the `box-content` utility to set an element's `box-sizing` to `content-box`, telling the browser to add borders and padding on top of the element's specified width or height.
+
+#### Responsive design
+
+* Prefix a `box-sizing` utility with a breakpoint variant like `md:` to only apply the utility at medium screen sizes.
+
+
+# Display
+
+* Utilities for controlling the display box type of an element.
+
+###### ex:
+### Block and Inline
+
+* We use the inline, inline-block, and block utilities to control the flow of text and elements.
+
+### Flow Root
+
+* We use the `flow-root` utility to create a block-level element with its own block formatting context.
+
+### Flex
+
+* Use the flex utility to create a block-level flex container.
+
+### Inline Flex
+
+* Use the `inline-flex` utility to create an inline flex container that flows with text.
+
+### Grid
+
+* Use the grid utility to create a grid container.
+
+### Inline Grid
+
+* `inline-grid` utility to create an inline grid container.
+
+### Contents
+
+* Use contents utility to create a "phantom" container whose children act like direct children of the parent.
+
+### Table
+
+* We use table elements like `table`, `table-row`, `table-cell`, `table-caption`, `table-column`, `table-column-group`, `table-header-group`, `table-row-group`, and `table-footer-group`.
+
+### Hidden
+
+* `hidden` utility to remove an element from the document.
+
+* To visually hide an element but keep it in the document, use the visibility property instead.
+
+### Screen-reader only
+
+* `sr-only` to hide an element visually without hiding it from screen readers.
+* Use `not-sr-only` to undo `sr-only`, making an element visible to sighted users as well as screen readers example:"sr-only sm:not-sr-only".
+* This can be useful when you want to visually hide something on small screens but show it on larger screens
+
+# float
+
+* The wrapping of content around an element.
+
+###### ex:
+
+### Floating elements to the right
+
+* `float-right` utility to float an element to the right of its container.
+
+### Floating elements to the left
+
+* `float-left` utility to float an element to the left of its container.
+
+### Disabling a float
+
+* `float-none` utility to reset any floats that are applied to an element.
+
+# clear
+
+* The wrapping of content around an element.
+
+###### ex:
+### Clearing left and right
+
+* `clear-left` utility to position an element below any preceding left-floated elements.
+* `clear-right` utility to position an element below any preceding right-floated elements.
+
+### Clearing all
+
+* `clear-both` utility to position an element below all preceding floated elements.
+
+### logical properties
+
+* `clear-start` and `clear-end` utilities, which use logical properties to map to either the left or right side based on the text direction.
+
+### Disabling clears
+
+* We use the `clear-none` utility to reset any clears that are applied to an element.
+
+# isolation
+
+* An element should explicitly create a new stacking context and `isolate`,`isolation-auto` utilities to control whether an element should explicitly create a new stacking contex.
+
+# object-fit
+
+* How a replaced element's content should be resized.
+
+### Resizing to cover
+
+* object-cover utility to resize an element's content to cover its container.
+
+### Containing within
+
+* `object-contain` utility to resize an element's content to stay contained within its container.
+
+### Stretching to fit
+
+* `object-fill` utility to stretch an element's content to fit its container.
+
+### Scaling down
+
+* `object-scale-down` utility to display an element's content at its original size but scale it down to fit its container.
+
+### original size
+
+* `object-none` utility to display an element's content at its original size ignoring the container size.
+
+# object-position
+
+* How a replaced element's content should be positioned within its container.
+
+* `object-left` and `object-bottom-right` to specify how a replaced element's content should be positioned within its container.
+
+*  `object-[<value>]` syntax to set the object position based on a completely custom value.
+
+# overflow
+
+* How an element handles content that is too large for the container
+
+###### ex:
+### Showing content
+
+* `overflow-visible` utility to prevent content within an element from being clipped. any content that overflows the bounds of the element will then be visible.
+
+### Hiding content
+
+* `overflow-hidden` utility to clip any content within an element that overflows the bounds of that element
+
+### Scrolling
+
+* We use the `overflow-auto` utility to add scrollbars to an element in the event that its content overflows the bounds of that element.
+
+### Scrolling horizontally
+
+* `overflow-x-auto` utility to allow horizontal scrolling.
+
+### Scrolling vertically 
+
+* `overflow-y-auto` utility to allow vertical scrolling.
+
+### Scrolling horizontally always
+
+* `overflow-x-scroll` utility to allow horizontal scrolling and always show scrollbars unless always-visible scrollbars are disabled.
+
+### Scrolling vertically always
+
+* `overflow-y-scroll` utility to allow vertical scrolling and always show scrollbars unless always-visible scrollbars are disabled.
+
+### Scrolling in all directions
+
+* We use `overflow-scroll` utility to add scrollbars to an element.
+
+# overscroll-behavior
+
+* How the browser behaves when reaching the boundary of a scrolling area.
+
+* `overscroll-contain` utility to prevent scrolling in the target area from triggering scrolling in the parent element.
+
+* `overscroll-none` utility to prevent scrolling in the target area from triggering scrolling in the parent element.
+
+* `overscroll-auto` utility to make it possible for the user to continue scrolling a parent scroll area when they reach the boundary of the primary scroll area.
+
+# position
+
+* How an element is positioned in the document.
+
+###### ex:
+### Static
+
+* `static` utility to position an element according to the normal flow of the document.
+
+### Relative
+
+* `relative` utility to position an element according to the normal flow of the document.
+
+### Absolute
+
+* `absolute` utility to position an element outside of the normal flow of the document.
+
+### Fixed
+
+* `fixed` utility to position an element relative to the browser window.
+
+### Sticky
+
+* `sticky` utility to position an element as `relative` until it crosses a specified threshold, then treat it as `fixed` until its parent is off screen.
+
+# top / right / bottom / left
+
+* The placement of positioned elements.
+
+* `top-<number>`, `right-<number>`, `bottom-<number>`, `left-<number>`, and `inset-<number>` utilities like `top-0` and `bottom-4` to set the horizontal or vertical position of a positioned element.
+
+* We can to use a negative top/right/bottom/left value, prefix the class name with a dash to convert it to a negative value.
+
+* `inset-[<value>]` and `top-[<value>]` to set the position based on a completely custom value.
+
+# visibility
+
+* The visibility of an element.
+
+* `invisible` utility to hide an element, but still maintain its place in the document, affecting the layout of other elements, To completely remove an element from the document.
+
+* `collapse` utility to hide table rows, row groups, columns, and column groups as if they were set to `display: none`, but without impacting the size of other rows and columns.
+
+* `visible` utility to make an element visible. 
+
+# z-index
+
+* The stack order of an element.
+
+* `z-<number>` utilities like `z-10` to control the stack order or three-dimensional positioning of an element.
+
+* To use a negative z-index value, prefix the class name with a dash to convert it to a negative value.
+
+
